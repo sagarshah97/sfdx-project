@@ -1,3 +1,12 @@
+# Welcome to my GitHub
+
+To know more about how the above components function, please visit the below website and navigate to Technical tab:
+https://sagar-shah-developer-edition.ap27.force.com/s/
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 # Salesforce App
 
 This guide helps Salesforce developers who are new to Visual Studio Code go from zero to a deployed app using Salesforce Extensions for VS Code and Salesforce CLI.
