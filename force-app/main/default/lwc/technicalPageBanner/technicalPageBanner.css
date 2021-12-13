@@ -1,0 +1,28 @@
+.description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #838383;
+  margin: 2rem;
+  text-align: center;
+}
+
+.about-work {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #838383;
+}
+
+.align-col {
+  display: flex;
+  align-items: center;
+}
+
+.grid-align {
+  padding-left: 12rem;
+  padding-right: 12rem;
+  padding-top: 1rem;
+}

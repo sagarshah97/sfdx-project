@@ -1,0 +1,26 @@
+.grid-align {
+  grid-column-gap: 10px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.data-table {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+
+.btn-add {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.btn-chart {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.col-width {
+  width: 32%;
+}

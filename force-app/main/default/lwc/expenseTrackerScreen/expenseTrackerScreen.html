@@ -1,0 +1,132 @@
+<!--
+  @description       : 
+  @author            : Sagar Paresh Shah (sagar.23723@gmail.com)
+  @group             : 
+  @last modified on  : 12-12-2021
+  @last modified by  : Sagar Paresh Shah (sagar.23723@gmail.com)
+-->
+<template>
+  <div class="sub-text text-align">
+    <p>
+      <span
+        >Aim: To generate the graph based on the data entered by the
+        end-user.</span
+      ><br />
+      <span>Technology: JavaScript, ChartJs library</span>
+    </p>
+  </div>
+  <hr />
+  <div class="slds-grid slds-wrap grid-align">
+    <div class="slds-col slds-size_4-of-6 sub-text text-align">
+      <p>
+        This functionality dynamically generates the graph to show the expense
+        report in a consize manner.<br />
+        Once the user starts typing in the details, these details are displayed
+        in a tabular format for better understanding of data.<br />
+        This data is then passed to the chart to generate a dynamic graph to
+        give an overview of the trend.
+      </p>
+    </div>
+    <div
+      class="
+        slds-col
+        slds-size_2-of-6
+        align-button
+        slds-border_left
+        slds-grid_vertical
+      "
+    >
+      <lightning-button
+        label="Try it!"
+        variant="brand"
+        value={row}
+        onclick={openVerifyCard}
+      ></lightning-button>
+      <div class="description slds-text-align_center slds-m-top_medium">
+        Clicking this will open a modal to perform hands-on and it will generate
+        corresponding JSON response
+      </div>
+    </div>
+  </div>
+  <template if:true={openCardModal}>
+    <section
+      role="dialog"
+      tabindex="-1"
+      aria-labelledby="modal-heading-01"
+      aria-modal="true"
+      aria-describedby="modal-content-id-1"
+      class="slds-modal slds-fade-in-open"
+    >
+      <div class="slds-modal__container">
+        <!-- MODAL HEADER -->
+        <header class="slds-modal__header">
+          <button
+            class="
+              slds-button slds-button_icon
+              slds-modal__close
+              slds-button_icon-inverse
+            "
+            title="Close"
+            onclick={closeModal}
+          >
+            <lightning-icon
+              icon-name="utility:close"
+              alternative-text="close"
+              variant="inverse"
+              size="small"
+            ></lightning-icon>
+            <span class="slds-assistive-text">Close</span>
+          </button>
+          <h2
+            id="modal-heading-01"
+            class="slds-text-heading_medium slds-hyphenate"
+          >
+            Expense Report
+          </h2>
+        </header>
+        <!-- MODAL BODY -->
+        <div
+          class="slds-modal__content slds-p-around_medium"
+          id="modal-content-id-1"
+        >
+          <c-expense-tracker onpass={showData}></c-expense-tracker>
+        </div>
+        <!-- MODAL FOOTER -->
+        <footer class="slds-modal__footer">
+          <button
+            class="slds-button slds-button_neutral"
+            onclick={closeModal}
+            title="Cancel"
+          >
+            Close
+          </button>
+        </footer>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </template>
+  <template if:true={data}>
+    <hr />
+    <div class="sub-text text-align slds-m-left_large">JSON Response:</div>
+    <div
+      class="slds-box response-class"
+      style="margin-left: auto; margin-right: auto"
+    >
+      <pre><p>{data}</p></pre>
+    </div>
+    <div class="sub-text text-align slds-m-top_large">
+      <ul>
+        <li>The entered data is captured in JSON format.</li>
+        <li>
+          This JSON can be further used to perform additional processing on the
+          data.
+        </li>
+        <li>
+          Developed using lightning web component framework based on JavaScript
+          and this code can be utilized to integrate with other generic
+          components.
+        </li>
+      </ul>
+    </div>
+  </template>
+</template>

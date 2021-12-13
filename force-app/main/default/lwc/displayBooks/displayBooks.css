@@ -1,0 +1,53 @@
+.timeline-search {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.slds-grid {
+  margin: 1rem 0;
+}
+
+.col-btn {
+  justify-content: flex-end;
+  display: flex;
+}
+
+.col-search {
+  width: 82%;
+}
+
+.book-option-picker .slds-visual-picker__figure,
+.book-option-picker .slds-visual-picker__body {
+  width: 150px;
+  height: 250px;
+}
+
+.book-option-picker .slds-text-heading_large {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  margin: 5px;
+}
+
+.book-option-picker .slds-text-title {
+  font-weight: normal;
+  font-size: 9px;
+  line-height: 14px;
+  text-align: center;
+}
+
+.check-icon {
+  --sds-c-icon-color-foreground-default: #fff;
+  --sds-c-icon-color-foreground: #fff;
+}
+
+img {
+  max-height: 120px;
+}
+
+.layout-item {
+  margin: 1rem;
+}

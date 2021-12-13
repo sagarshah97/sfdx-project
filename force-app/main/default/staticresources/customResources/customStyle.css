@@ -1,0 +1,25 @@
+.update-address .slds-checkbox .slds-checkbox__label .slds-form-element__label {
+    display: inline-block;
+    max-width: calc(100% - 30px);
+    hyphens: none;
+    word-break: keep-all;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: none;
+    background: rgba(0,0,0,0.35);
+}
+
+.dt-outer-container{
+    height:auto
+}

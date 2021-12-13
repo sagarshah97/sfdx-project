@@ -1,0 +1,58 @@
+<!--
+  @description       : 
+  @author            : Sagar Paresh Shah (sagar.23723@gmail.com)
+  @group             : 
+  @last modified on  : 12-13-2021
+  @last modified by  : Sagar Paresh Shah (sagar.23723@gmail.com)
+-->
+<template>
+  <div class="slds-box">
+    <div class="display-result-row">
+      <div
+        class="
+          contact-header
+          align-items
+          slds-grid slds-wrap
+          slds-grid_vertical
+        "
+      >
+        <div class="slds-col slds-m-around_medium">
+          <span
+            >You can reach out to me by dropping in a mail, I'll be looking
+            foward to connect with you.</span
+          >
+        </div>
+        <div class="slds-col slds-m-around_small">
+          <a
+            class="slds-button slds-button_brand"
+            href="mailto:contact@test.com"
+            >Send Mail</a
+          >
+        </div>
+      </div>
+      <hr />
+      <div
+        class="
+          contact-header
+          align-items
+          slds-grid slds-wrap
+          slds-grid_vertical
+        "
+      >
+        <div class="slds-col slds-m-around_medium">
+          <div class="slds-text-align_center">
+            To know more about technical work and components, you can visit my
+            GitHub page.
+          </div>
+        </div>
+        <div class="slds-col slds-m-around_small">
+          <lightning-button
+            label="GitHub"
+            variant="brand"
+            onclick={openGitHub}
+          ></lightning-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

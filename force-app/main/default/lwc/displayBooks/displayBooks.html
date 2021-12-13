@@ -1,0 +1,90 @@
+<!--
+  @description       : 
+  @author            : Sagar Paresh Shah (sagar.23723@gmail.com)
+  @group             : 
+  @last modified on  : 12-13-2021
+  @last modified by  : Sagar Paresh Shah (sagar.23723@gmail.com)
+-->
+<template>
+  <div class="slds-grid slds-wrap">
+    <div class="slds-col col-search">
+      <lightning-input
+        onchange={handleChange}
+        name="enter-search"
+        variant="label-hidden"
+        type="search"
+        placeholder="Search..."
+      ></lightning-input>
+    </div>
+    <div class="slds-col col-btn">
+      <lightning-button
+        label="Find books"
+        variant="brand"
+        onclick={handleSearchClick}
+      ></lightning-button>
+    </div>
+  </div>
+  <template if:true={loading}>
+    <lightning-spinner size="small" variant="brand"></lightning-spinner>
+  </template>
+  <template if:true={books}>
+    <lightning-layout horizontal-align="space" multiple-rows>
+      <template for:each={books.items} for:item="book">
+        <div key={book.id} class="layout-item">
+          <lightning-layout-item>
+            <div
+              class="
+                slds-visual-picker slds-visual-picker_medium
+                book-option-picker
+              "
+            >
+              <input
+                type="radio"
+                id={book.id}
+                value={book.id}
+                name="example-unique-name-36"
+                onchange={handleSelection}
+              />
+              <label for={book.id}>
+                <span
+                  class="
+                    slds-visual-picker__figure slds-visual-picker__text
+                    slds-align_absolute-center
+                  "
+                >
+                  <span>
+                    <template if:true={book.volumeInfo.imageLinks}>
+                      <img src={book.volumeInfo.imageLinks.thumbnail} /><br />
+                    </template>
+                    <span class="slds-text-heading_large"
+                      >{book.volumeInfo.title}</span
+                    >
+                    <template if:true={book.volumeInfo.authors}>
+                      <template
+                        for:each={book.volumeInfo.authors}
+                        for:item="author"
+                      >
+                        <span key={author} class="slds-text-title"
+                          >{author}</span
+                        >
+                      </template>
+                    </template>
+                  </span>
+                </span>
+                <span
+                  class="slds-icon_container slds-visual-picker__text-check"
+                >
+                  <lightning-icon
+                    icon-name="utility:check"
+                    class="check-icon"
+                    size="x-small"
+                  ></lightning-icon>
+                </span>
+              </label>
+            </div>
+          </lightning-layout-item>
+        </div>
+      </template>
+    </lightning-layout>
+  </template>
+</template>

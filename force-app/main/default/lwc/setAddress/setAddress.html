@@ -1,0 +1,31 @@
+<!--
+  @description       : 
+  @author            : Sagar Paresh Shah (sagar.23723@gmail.com)
+  @group             : 
+  @last modified on  : 12-11-2021
+  @last modified by  : Sagar Paresh Shah (sagar.23723@gmail.com)
+-->
+<template>
+  <section class="update-address">
+    <lightning-input-address
+      address-label="Address"
+      street-label="Address line 1"
+      city-label="City"
+      country-label="Country"
+      province-label="State"
+      postal-code-label="Zip code"
+      street={address.street}
+      city={address.city}
+      country={country}
+      province={province}
+      postal-code={address.postalCode}
+      country-options={countryPicklist}
+      province-options={statePicklist}
+      onchange={handleAddressChange}
+      address-lookup-placeholder="Search for address"
+      show-address-lookup
+      required
+    >
+    </lightning-input-address>
+  </section>
+</template>

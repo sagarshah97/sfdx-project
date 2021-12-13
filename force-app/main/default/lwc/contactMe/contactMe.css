@@ -1,0 +1,23 @@
+.description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #838383;
+}
+
+.contact-header {
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 30px;
+  text-align: center;
+}
+
+.align-items {
+  align-items: center;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

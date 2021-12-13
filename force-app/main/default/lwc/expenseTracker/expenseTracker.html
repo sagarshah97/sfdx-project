@@ -1,0 +1,55 @@
+<!--
+  @description       : 
+  @author            : Sagar Paresh Shah (sagar.23723@gmail.com)
+  @group             : 
+  @last modified on  : 12-13-2021
+  @last modified by  : Sagar Paresh Shah (sagar.23723@gmail.com)
+-->
+<template>
+  <div class="slds-grid slds-wrap grid-align">
+    <div class="slds-col col-width">
+      <lightning-input
+        value={type}
+        onchange={inputType}
+        label="Mention type of expense"
+      ></lightning-input>
+    </div>
+    <div class="slds-col col-width">
+      <lightning-input
+        value={amount}
+        onchange={inputAmount}
+        label="Enter amount spent"
+      ></lightning-input>
+    </div>
+    <div class="slds-col btn-add">
+      <lightning-button
+        label="Add"
+        onclick={handleAddData}
+        disabled={disableAdd}
+      ></lightning-button>
+    </div>
+    <div class="slds-col btn-chart">
+      <lightning-button
+        label="Show chart"
+        variant="brand"
+        onclick={handleShowChart}
+        disabled={disableChart}
+      ></lightning-button>
+    </div>
+  </div>
+  <template if:true={isData}>
+    <div class="data-table">
+      <lightning-datatable
+        key-field="id"
+        data={data}
+        columns={columns}
+        hide-checkbox-column
+      ></lightning-datatable>
+    </div>
+  </template>
+  <template if:true={chartConfiguration}>
+    <lightning-card title="Expense chart" icon-name="utility:chart">
+      <c-chart chart-config={chartConfiguration}></c-chart>
+    </lightning-card>
+  </template>
+</template>

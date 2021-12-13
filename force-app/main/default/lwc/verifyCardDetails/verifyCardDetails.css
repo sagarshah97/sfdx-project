@@ -1,0 +1,51 @@
+.section-title {
+  color: #3e3e3c;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+}
+
+.section-title lightning-button {
+  font-size: 13px;
+}
+
+.check-icon {
+  --sds-c-icon-color-foreground-default: #fff;
+  --sds-c-icon-color-foreground: #fff;
+}
+.payment-icon {
+  --sds-c-icon-color-foreground-default: #b0adab;
+  --sds-c-icon-color-foreground: #b0adab;
+}
+
+.card-icon {
+  width: 48px;
+}
+
+.card-input {
+  position: relative;
+}
+
+.card-input .card-icon {
+  position: absolute;
+  z-index: 1;
+  right: 10px;
+  top: 36px;
+  height: 24px;
+}
+
+.align-buttons {
+  justify-content: flex-end;
+  display: flex;
+}
+
+.align-items {
+  display: flex;
+  align-items: center;
+}
+
+.col-align {
+  display: flex;
+  justify-content: flex-end;
+}

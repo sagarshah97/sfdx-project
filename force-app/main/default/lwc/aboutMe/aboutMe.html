@@ -1,0 +1,62 @@
+<!--
+  @description       : 
+  @author            : Sagar Paresh Shah (sagar.23723@gmail.com)
+  @group             : 
+  @last modified on  : 12-13-2021
+  @last modified by  : Sagar Paresh Shah (sagar.23723@gmail.com)
+-->
+<template>
+  <div class="about-me slds-box">
+    <div class="display-result">
+      <div class="display-result-row slds-grid slds-grid_align-spread">
+        <div class="slds-col about-me-img-col">
+          <template if:true={profileImage}>
+            <img src={profileImage} alt="" />
+          </template>
+          <template if:false={profileImage}>
+            <span
+              class="
+                slds-avatar slds-avatar_circle slds-avatar_large
+                care-team-avatar
+              "
+            >
+              <abbr class="slds-avatar__initials" title="Person name">SS</abbr>
+            </span>
+          </template>
+        </div>
+        <div class="slds-col about-me-content-col slds-border_left">
+          <div class="slds-text-heading_small slds-m-bottom_xx-small">
+            Sagar Shah
+          </div>
+          <div class="slds-text-title slds-text-color_weak">
+            <div class="designation">Developer, Salesforce</div>
+            <br />
+            <div class="tech-badge">
+              <span class="slds-badge">JavaScript</span>
+              <span class="slds-badge">Java</span>
+              <span class="slds-badge">Apex</span>
+              <span class="slds-badge">C++</span>
+              <span class="slds-badge">SOQL</span>
+              <span class="slds-badge">HTML</span>
+              <span class="slds-badge">CSS</span>
+            </div>
+            <div class="description">
+              I am a tech-enthusiast with a keen interest in designing and
+              developing functionalities to improve user experience by rapidly
+              and intelligently performing a multitude of tasks, all together.
+              My work predominantly lies in the field of cloud technology,
+              Salesforce, where I am currently involved in building intricate
+              use-cases around finance and health services. I have been a part
+              of multiple full-stack development projects in my industrial
+              experience of 2+ years, employing Java, JavaScript, SOQLs, HTML,
+              CSS. Stepping into the field of automation and artificial
+              intelligence, I have gained hands-on experience on the OneReach.ai
+              platform and Amazon Connect services to integrate them with
+              Salesforce.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
