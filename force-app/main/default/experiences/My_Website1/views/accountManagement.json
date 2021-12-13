@@ -1,0 +1,121 @@
+{
+  "appPageId" : "47be6db0-8017-4444-878a-04c4dfd3bccb",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "id" : "dfd36fe6-0006-4417-b0d3-54c25c8e96c4",
+  "label" : "Account Management",
+  "regions" : [ {
+    "id" : "9456bd22-2f05-485a-ada1-5fc55efc24eb",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "tabsetConfig" : {
+          "UUID" : "a7fca77f-5eb1-40bf-ba23-3261d1b8ccd1",
+          "activeTab" : "tab1",
+          "tabs" : [ {
+            "UUID" : "47fd3768-bc84-4ea5-8a6c-5e9cb80d7637",
+            "allowGuestUser" : true,
+            "locked" : false,
+            "seedComponents" : [ {
+              "attributes" : {
+                "customTitle" : "Members",
+                "parentRecordId" : "{!CurrentUser.accountId}",
+                "relatedListName" : "Users",
+                "showBreadCrumbs" : "false",
+                "showCustomTitle" : "true",
+                "showManualRefreshButton" : "false",
+                "showRowNumbers" : "false"
+              },
+              "fqn" : "forceCommunity:relatedList"
+            } ],
+            "tabKey" : "tab1",
+            "tabName" : "Credit and payment"
+          }, {
+            "UUID" : "58cc1909-89f2-45c8-b0ff-62a662a55f4f",
+            "allowGuestUser" : true,
+            "locked" : false,
+            "seedComponents" : [ {
+              "attributes" : {
+                "recordId" : "{!CurrentUser.accountId}"
+              },
+              "fqn" : "forceCommunity:accountBrandRecord"
+            } ],
+            "tabKey" : "tab2",
+            "tabName" : "Health care"
+          }, {
+            "UUID" : "7de1f3a8-28bd-4564-8229-536502f52b76",
+            "allowGuestUser" : true,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "69a8d",
+            "tabName" : "Trend prediction"
+          }, {
+            "UUID" : "edd774e9-2269-47d0-8f5e-1ad0736f4d88",
+            "allowGuestUser" : true,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "e6a61",
+            "tabName" : "Data modification"
+          } ],
+          "useOverflowMenu" : false
+        }
+      },
+      "componentName" : "forceCommunity:tabset",
+      "id" : "a7fca77f-5eb1-40bf-ba23-3261d1b8ccd1",
+      "regions" : [ {
+        "id" : "47fd3768-bc84-4ea5-8a6c-5e9cb80d7637",
+        "regionLabel" : "Credit and payment",
+        "regionName" : "tab1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "58cc1909-89f2-45c8-b0ff-62a662a55f4f",
+        "regionLabel" : "Health care",
+        "regionName" : "tab2",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "7de1f3a8-28bd-4564-8229-536502f52b76",
+        "regionLabel" : "Trend prediction",
+        "regionName" : "69a8d",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "edd774e9-2269-47d0-8f5e-1ad0736f4d88",
+        "regionLabel" : "Data modification",
+        "regionName" : "e6a61",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8ef93e95-6be3-4c63-81b1-5883b4ca7446",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "c8b28cda-9b53-4378-ba20-a8b08a74b1a0",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Account Management"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "218e75dd-8c7c-40d9-82dd-5284d95d0307",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "fe733948-a82c-435b-8fc7-7a1741e67315",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "account-management"
+}

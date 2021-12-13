@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "018f409e-2e28-4196-9c8d-5f795e824db3",
+  "appPageId" : "47be6db0-8017-4444-878a-04c4dfd3bccb",
+  "configurationTags" : [ ],
+  "id" : "06f7e8b5-4e08-437f-ae75-9d43c6c1b586",
+  "label" : "Technical",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-technical",
+  "type" : "route",
+  "urlPrefix" : "technical"
+}
